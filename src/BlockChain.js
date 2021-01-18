@@ -3,7 +3,8 @@ const moment = require("moment");
 class BlockChain {
     constructor() {
         this.chains = [this.makeFirstBlock()];
-        this.difficulty = 4;
+        this.difficulty = 3;
+        this.chainValidity = this.checkChainValidity();
     }
 
     makeFirstBlock = () => {
