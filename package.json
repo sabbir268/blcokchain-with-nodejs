@@ -11,6 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "blakejs": "^1.2.1",
         "crypto-js": "^4.0.0",
         "express": "^4.17.1",
         "moment": "^2.29.1"

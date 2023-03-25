@@ -3,7 +3,7 @@ const moment = require("moment");
 class BlockChain {
     constructor() {
         this.chains = [this.makeFirstBlock()];
-        this.difficulty = 3;
+        this.difficulty = 2;
         this.chainValidity = this.checkChainValidity();
     }
 
@@ -24,8 +24,10 @@ class BlockChain {
 
     checkChainValidity = () => {
         for (let i = 1; i < this.chains.length; i++) {
+            // console.log("asdas" + i);
             const currentBlock = this.chains[i];
             const prevBlock = this.chains[i - 1];
+            // console.log("currentBlock" + i);
 
             if (currentBlock.hash !== currentBlock.computeHash()) {
                 return false;
